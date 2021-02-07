@@ -1,0 +1,231 @@
+{% extends "layout.html" %} {% block body %}
+<!-- Portfolio Grid Items-->
+<header class="masthead bg-primary text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="/assets/images/avatar" alt="" />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Machin Learning</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">Carlos Andrade - Alexander Coba - Stefany Sanchez</p>
+    </div>
+</header>
+<!-- Portfolio Section-->
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">IRIS</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+</section>
+<section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-12 col-lg-12 mb-12">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
+                    </div>
+                </div>
+                <center>
+                    <img
+                        src="https://i.pinimg.com/600x315/fb/0e/ba/fb0ebaacd6cf81ea5fe8dc9d3d8aff17.jpg"
+                        height="100 px" alt="iris">
+                </center>
+
+                <h5 class="card-title">Iris</h5>
+                <p class="card-text">Este conjunto de datos contiene 50 muestras de cada una de tres especies de Iris:
+                    Iris setosa, Iris virginica e Iris versicolor, para cada una de estas especies se midieron cuatro
+                    rasgos de cada muestra: la longitud y el ancho del
+                    sépalos y pétalos.</p>
+                <center><button type="button" class="btn btn-primary" id="iris">Empezar</button></center>
+
+                <br>
+                <div id="formulario_iris" style="display: none;">
+                    <form action="/Iris" method="POST" style="text-align: center;">
+                        <div class="form-group">
+                            <input type="number" name="sepal_length" placeholder="sepal length (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="sepal_width" placeholder="sepal width (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="petal_length" placeholder="petal length (cm)" min="0" step="0.1"
+                                required>
+                            <input type="number" name="petal_width" placeholder="petal width (cm)" min="0" step="0.1"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Clasificar</button>
+                        </div>
+                    </form>
+
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Item 2-->
+<div class="container">
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Abalone</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+
+<section class="page-section bg-primary text-white mb-0" id="contact">
+    <div class="row justify-content-center">
+        <!-- Portfolio Item 1-->
+        <div class="col-md-12 col-lg-12 mb-12">
+            <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                    <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <center> <img
+                            src="https://www.wipo.int/export/sites/www/ipadvantage/images/article_0010_6_845.jpg"
+                            height="150 px" alt="Celular">
+                       </center>
+
+                        <h5 class="card-title">Precio móvil</h5>
+                        <p class="card-text">Este conjunto de datos recopila informacion de ventas de teléfonos móviles
+                            de varias compañías mediante la relación entre las características de un teléfono móvil (por
+                            ejemplo: RAM, memoria interna, etc.) y su precio de venta.
+                        </p>
+                </div>
+                <center> <button type="button" class="btn btn-primary" id="celulares">Empezar</button> </center>
+                <div id="formulario_celular" style="display: none;">
+
+
+    <form action="/celular" method="POST">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="formGroupExampleInput">Número de núcleos del procesador</label>
+                <input type="number" name="nucleos" class="form-control" min="0" required placeholder="Ejemplo: 4">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">velocidad de reloj(GHz)</label>
+                <input type="number" name="reloj" class="form-control" min="0" step="0.1" required
+                    placeholder="Ejemplo: 2.0">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="formGroupExampleInput">Memoria RAM (Gb)</label>
+                <input type="number" name="ram" class="form-control" min="0" required placeholder="Ejemplo: 8">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Memoria interna (Gb)</label>
+                <input type="number" name="rom" class="form-control" min="0" required placeholder="Ejemplo: 64">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Potencia de la batería (mAh)</label>
+                <input type="number" name="bateria" class="form-control" min="0" required placeholder="Ejemplo: 1800">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">tiempo de conversación (horas)</label>
+                <input type="number" name="conversacion" class="form-control" min="0" required
+                    placeholder="Ejemplo: 72">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Cámara principal (Mpx)</label>
+                <input type="number" name="camaraP" class="form-control" min="0" required placeholder="Ejemplo: 18">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Cámara secundaria (Mpx)</label>
+                <input type="number" name="camaraS" class="form-control" min="0" required placeholder="Ejemplo: 10">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Alto de resolución (px)</label>
+                <input type="number" name="alto_Resol" class="form-control" min="0" required placeholder="Ejemplo: 800">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Ancho de resolución (px)</label>
+                <input type="number" name="ancho_Resol" class="form-control" min="0" required
+                    placeholder="Ejemplo: 600">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Altura de pantalla (cm)</label>
+                <input type="number" name="altura_Pant" class="form-control" min="0" step="0.1" required
+                    placeholder="Ejemplo: 10">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Ancho de pantalla (cm)</label>
+                <input type="number" name="ancho_Pant" class="form-control" min="0" step="0.1" required
+                    placeholder="Ejemplo: 3">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Profundidad móvil (cm)</label>
+                <input type="number" name="profundidad" class="form-control" min="0" step="0.1" required
+                    placeholder="Ejemplo: 0.5">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="formGroupExampleInput">Peso del teléfono móvil (g)</label>
+                <input type="number" name="peso" class="form-control" min="0" step="0.1" required
+                    placeholder="Ejemplo: 80">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="checkbox-inline">
+                <input type="checkbox" name="sim">Doble SIM&nbsp;&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="tec4g">4G&nbsp;&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="tec3g">3G&nbsp;&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="pantalla">Pantalla táctil&nbsp;&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="bluetooth">Bluetooth&nbsp;&nbsp;
+            </label>
+            <label class="checkbox-inline">
+                <input type="checkbox" name="wifi">Wifi&nbsp;&nbsp;
+            </label>
+        </div>
+        <div class="form-group">
+            <button type="submit " class="btn btn-primary ">Calcular</button>
+        </div>
+    </form>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+{% endblock %}
